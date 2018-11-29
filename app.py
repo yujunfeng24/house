@@ -29,6 +29,7 @@ import uuid, flask_login
 
 import logging
 
+
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 
@@ -157,4 +158,7 @@ Communications will happen over USB, make sure have your android device plugged 
     
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception,e:
+        print e.args
